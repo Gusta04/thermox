@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    width: 100vw;
+    min-height: 100vh;
+    height: 100%;
+    background-color: #2c3e50;
+    color: #f8f8f8;
+    font-family: Poppins, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator__container{
+    width: 40vw;
+    height: 90vh;
+    background-color: #2f5780;
+    border-radius: 0 5vw 5vw 5vw;
+}
+
+.injection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2vw;
+}
+
+.title{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/*#region Medidas parte da Injetora / Relação / Vazão */
+/*---------------------------------------------------------------------------*/
+
+.measures__container, .relations__container{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    margin: 2vh 0;
+}
+
+.measure__container, .relation__container, .vazao__container, .time-injection__container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 20vw;
+}
+
+.vazao__container{
+    margin-bottom: 2vh;
+}
+
+.label__measures, .label__relation, .label__vazao, .time-injection__title{
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 8vw;
+}
+
+.relation__title{
+    font-size: 1.8rem;
+}
+
+.relation__divisor{
+    border: solid 0.15vw #f8f8f8;
+    width: 100%;
+    margin-top: -1.5vh;
+    margin-bottom: -1.5vh;
+}
+
+.measure, .relation, .vazao{
+    width: 12vw;
+    height: 3vh;
+    border-radius: 50vw;
+    font-size: 1.5rem;
+    border: solid 0.15vw #2c3e50;
+    outline: 0;
+    padding-left: 0.3vw;
+}
+
+.time-injection__container{
+    margin-top: 2vh;
+}
+
+.time-injection__title{
+    width: 18vw;
+}
+
+.time-injection{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgb(255, 255, 0)
+}
+/*---------------------------------------------------------------------------*/
+/*#endregion Medidas parte da Injetora / Relação / Vazão*/
+
+/*#region Densidade*/
+/*---------------------------------------------------------------------------*/
+
+.density__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 20vw;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2vh;
+}
+
+.density-title{
+    width: 10vw;
+}
+/*---------------------------------------------------------------------------*/
+/*#endregion Densidade*/
+
+
+/*#region Tabela*/
+/*--------------------------------------------------------------------------*/
+.table__principal, .table__principal tr, .table__principal tr td, .table__principal tr th{
+    border: solid 1px #2c3e50;
+    vertical-align: middle;
+}
+
+.table__principal tr{
+    height: 3vh;
+}
+
+.table__principal{
+    width: 20vw;
+}
+
+.column__title{
+    font-size: 1.2rem;
+}
+
+.column__type{
+    width: 5vw;
+}
+
+.row__title{
+    padding-left: 0.15vw;
+    font-size: 1.2rem;
+}
+
+.row__content{
+    text-align: center;
+}
+/*--------------------------------------------------------------------------*/
+/*#endregion Tabela*/
+
+/*#region Buttons*/
+/*--------------------------------------------------------------------------*/
+.btn__container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5vh;
+    gap: 2vw;
+}
+
+.button{
+    width: 7vw;
+    height: 4vh;
+    font-size: 1.5rem;
+    border-radius: 25vw;
+    border: none;
+    outline: 0;
+}
+
+.btn__clear{
+    background-color: rgb(150, 3, 3);
+    color: #f8f8f8;
+}
+
+.button:hover{
+    cursor: pointer;
+}
+/*--------------------------------------------------------------------------*/
+/*#region Buttons*/
+
+
+/*#region Abas*/
+/*--------------------------------------------------------------------------*/
+
+.aba__container{
+    display: flex;
+}
+
+.aba{
+    background-color: #2c3e50;
+    width: 4vw;
+    height: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 0.25vw 0;
+}
+
+.aba:hover{
+    cursor: pointer;
+    background-color: #46607a;
+}
+
+.active{
+    background-color: #2f5780;
+}
+
+.tab__content{
+    display: none;
+}
+
+.tab__active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2vw;
+}
+
+.aba__text{
+    font-size: 1rem;
+}
+
+/*--------------------------------------------------------------------------*/
+/*#endregion Abas*/
+
+
+/*------------------------------------------------------------------*/
