@@ -15,6 +15,7 @@
             <div class="aba__container">
                 <div class="aba active" onclick="showTab('injection', this)"><p class="aba__text">Injetora</p></div>
                 <div class="aba" onclick="showTab('manual', this)"><p class="aba__text">Manual</p></div>
+                <div class="aba" onclick="showTab('batente', this)"><p class="aba__text">Batente</p></div>
             </div>
 
             <div class="injection tab__content tab__active" id="injection">
@@ -186,9 +187,88 @@
                     <input type="button" value="Limpar" class="button btn__clear" id="clear__manual">
                 </div>
             </div>
+
+            <div class="batente tab__content" id="batente">
+                <h2 class="title">Batente</h2>
+
+                <div class="measures__container">
+                    <div class="measure__container">
+                        <label class="label__measures" for="height__batente">Altura:</label>
+                        <input type="text" name="height" id="height__batente" class="measure" placeholder="Em milímetros...">
+                    </div>
+
+                    <div class="measure__container">
+                        <label class="label__measures" for="width__batente">Largura:</label>
+                        <input type="text" name="width" id="width__batente" class="measure" placeholder="Em milímetros...">
+                    </div>
+
+                    <div class="measure__container">
+                        <label class="label__measures" for="type__batente">Batente de:</label>
+                        <select name="type" id="type__batente" class="measure">
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="density__container">
+                    <label class="density-title" for="density__batente">Densidade:</label>
+                    <input type="text" class="density__input" id="density__batente" value="42"><p>&nbsp;kg/m³</p>
+                </div>
+
+                <div class="relations__container">
+                    <h2 class="relation__title">Relação</h2>
+                    <hr class="relation__divisor">
+                    <div class="relation__container">
+                        <label for="relation__poliol__batente" class="label__relation">Poliol:</label>
+                        <input type="text" name="relation__poliol" id="relation__poliol__batente" class="relation" value="100">
+                    </div>
+
+                    <div class="relation__container">
+                        <label for="relation__iso__batente" class="label__relation">ISO:</label>
+                        <input type="text" name="relation__iso" id="relation__iso__batente" class="relation" value="120">
+                    </div>
+                </div>
+
+                <div class="table__container">
+                    <table class="table__principal">
+                        <thead>
+                            <tr class="column__title">
+                                <th>
+                                </th>
+                                <th class="column__type">Quilo</th>
+                                <th class="column__type">Gramas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row">
+                                <td class="row__title">Massa Total</td>
+                                <td class="row__content" id="massa__total--quilo__batente"></td>
+                                <td class="row__content" id="massa__total--grama__batente"></td>
+                            </tr>
+                            <tr class="row">
+                                <td class="row__title">Massa Poliol</td>
+                                <td class="row__content" id="massa__poliol--quilo__batente"></td>
+                                <td class="row__content" id="massa__poliol--grama__batente"></td>
+                            </tr>
+                            <tr class="row">
+                                <td class="row__title">Massa ISO</td>
+                                <td class="row__content" id="massa__mdi--quilo__batente"></td>
+                                <td class="row__content" id="massa__mdi--grama__batente"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="btn__container">
+                    <input type="button" value="Calcular" class="button btn__calculate" id="calculate__batente">
+                    <input type="button" value="Limpar" class="button btn__clear" id="clear__batente">
+                </div>
+            </div>
         </div>
         <script src="scripts/injetora.js"></script>
         <script src="scripts/manual.js"></script>
+        <script src="scripts/batente.js"></script>
         <script>
             function showTab(tabId, element) {
                 document.querySelectorAll('.tab__content').forEach(tab => tab.classList.remove('tab__active'));

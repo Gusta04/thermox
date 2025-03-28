@@ -105,10 +105,11 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
     width: 20vw;
-    font-size: 1.5em;
     font-weight: 600;
     margin-bottom: 2vh;
+    font-size: 1.5em;
 }
 
 .density-title{
@@ -228,4 +229,18 @@ body{
 /*#endregion Abas*/
 
 
+/*#region Batente Density*/
 /*------------------------------------------------------------------*/
+.density__input{
+    width: 7vw;
+    height: 3vh;
+    border-radius: 50vw;
+    border: solid 0.15vw #2c3e50;
+    outline: 0;
+    padding-left: 0.3vw;
+    font-size: 1em;
+}
+
+
+/*------------------------------------------------------------------*/
+/*#endregion Batente Density*/
