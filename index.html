@@ -15,6 +15,7 @@
             <div class="aba__container">
                 <div class="aba active" onclick="showTab('injection', this)"><p class="aba__text">Injetora</p></div>
                 <div class="aba" onclick="showTab('manual', this)"><p class="aba__text">Manual</p></div>
+                <div class="aba" onclick="showTab('batente', this)"><p class="aba__text">Batente</p></div>
             </div>
 
             <div class="injection tab__content tab__active" id="injection">
@@ -108,6 +109,86 @@
             </div>
 
             <div class="manual tab__content" id="manual">
+                <h2 class="title">Manual</h2>
+
+                <div class="measures__container">
+                    <div class="measure__container">
+                        <label class="label__measures" for="height__manual">Altura:</label>
+                        <input type="text" name="height" id="height__manual" class="measure" placeholder="Em milímetros...">
+                    </div>
+
+                    <div class="measure__container">
+                        <label class="label__measures" for="width__manual">Largura:</label>
+                        <input type="text" name="width" id="width__manual" class="measure" placeholder="Em milímetros...">
+                    </div>
+
+                    <div class="measure__container">
+                        <label class="label__measures" for="thickness__manual">Porta de:</label>
+                        <select name="thickness" id="thickness__manual" class="measure">
+                            <option value="40">Sem temperatura</option>
+                            <option value="60">Resfriados</option>
+                            <option value="100">Congelados</option>
+                            <option value="120">Super-Congelados</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="density__container">
+                    <p class="density-title">Densidade:</p>
+                    <p class="density" id="density__manual">42</p><p>&nbsp;kg/m³</p>
+                </div>
+
+                <div class="relations__container">
+                    <h2 class="relation__title">Relação</h2>
+                    <hr class="relation__divisor">
+                    <div class="relation__container">
+                        <label for="relation__poliol" class="label__relation">Poliol:</label>
+                        <input type="text" name="relation__poliol" id="relation__poliol__manual" class="relation" value="100">
+                    </div>
+
+                    <div class="relation__container">
+                        <label for="relation__iso" class="label__relation">ISO:</label>
+                        <input type="text" name="relation__iso" id="relation__iso__manual" class="relation" value="120">
+                    </div>
+                </div>
+
+                <div class="table__container">
+                    <table class="table__principal">
+                        <thead>
+                            <tr class="column__title">
+                                <th>
+                                </th>
+                                <th class="column__type">Quilo</th>
+                                <th class="column__type">Gramas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row">
+                                <td class="row__title">Massa Total</td>
+                                <td class="row__content" id="massa__total--quilo__manual"></td>
+                                <td class="row__content" id="massa__total--grama__manual"></td>
+                            </tr>
+                            <tr class="row">
+                                <td class="row__title">Massa Poliol</td>
+                                <td class="row__content" id="massa__poliol--quilo__manual"></td>
+                                <td class="row__content" id="massa__poliol--grama__manual"></td>
+                            </tr>
+                            <tr class="row">
+                                <td class="row__title">Massa ISO</td>
+                                <td class="row__content" id="massa__mdi--quilo__manual"></td>
+                                <td class="row__content" id="massa__mdi--grama__manual"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="btn__container">
+                    <input type="button" value="Calcular" class="button btn__calculate" id="calculate__manual">
+                    <input type="button" value="Limpar" class="button btn__clear" id="clear__manual">
+                </div>
+            </div>
+
+            <div class="batente tab__content" id="batente">
                 <h2 class="title">Manual</h2>
 
                 <div class="measures__container">
